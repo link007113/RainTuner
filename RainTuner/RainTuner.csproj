@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	  <AssemblyName>RainTuner</AssemblyName>
+	  <RootNamespace>RainTuner</RootNamespace>
+	  <GamePath>F:\SteamLibrary\steamapps\common\Stardew Valley</GamePath>
+	  <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <!-- Verwijs naar jouw lokale game- en SMAPI-dll's. 
+       Pas de paden aan naar jouw installatie.  -->
+  <ItemGroup>
+	  <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.3.2" />
+	  <Reference Include="GenericModConfigMenu">
+	    <HintPath>F:\Vortex Mods\stardewvalley\Generic Mod Config Menu 1.15.0-5098-1-15-0-1748398140\GenericModConfigMenu\GenericModConfigMenu.dll</HintPath>
+	  </Reference>
+    <Reference Include="SMAPI.Toolkit">
+      <HintPath>F:\SteamLibrary\steamapps\common\Stardew Valley\smapi-internal\SMAPI.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces">
+      <HintPath>F:\SteamLibrary\steamapps\common\Stardew Valley\smapi-internal\SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Stardew Valley">
+      <HintPath>F:\SteamLibrary\steamapps\common\Stardew Valley\Stardew Valley.dll</HintPath>
+    </Reference>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>F:\SteamLibrary\steamapps\common\Stardew Valley\StardewModdingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="StardewValley.GameData">
+      <HintPath>F:\SteamLibrary\steamapps\common\Stardew Valley\StardewValley.GameData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
