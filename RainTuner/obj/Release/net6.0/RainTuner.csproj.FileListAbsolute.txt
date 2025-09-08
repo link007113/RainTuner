@@ -10,3 +10,4 @@ C:\Users\Antho\source\repos\RainTuner\RainTuner\obj\Release\net6.0\RainTuner.csp
 C:\Users\Antho\source\repos\RainTuner\RainTuner\obj\Release\net6.0\RainTuner.csproj.Up2Date
 C:\Users\Antho\source\repos\RainTuner\RainTuner\obj\Release\net6.0\RainTuner.dll
 C:\Users\Antho\source\repos\RainTuner\RainTuner\bin\Release\net6.0\GenericModConfigMenu.dll
+C:\Users\Antho\source\repos\RainTuner\RainTuner\obj\Release\net6.0\RainTuner.sourcelink.json

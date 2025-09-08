@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RainTuner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e78e1c5193596f48b0ddbc50c8279d342136883d")]
 [assembly: System.Reflection.AssemblyProductAttribute("RainTuner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RainTuner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
