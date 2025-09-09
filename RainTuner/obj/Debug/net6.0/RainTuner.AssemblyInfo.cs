@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RainTuner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1be08b120f9d0799651f3a60d1becbd9cac84300")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab04011938c4f14eaf50d5ee252474e1df7b7e6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RainTuner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RainTuner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
