@@ -19,8 +19,10 @@ namespace RainTuner
             Config = Helper.ReadConfig<ModConfig>();
 
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
-            helper.Events.GameLoop.DayEnding += OnDayEnding;
+            // helper.Events.GameLoop.DayEnding += OnDayEnding;   // weg ermee
+            helper.Events.GameLoop.DayStarted += OnDayStarted;     // nieuw
             helper.Events.Input.ButtonsChanged += OnButtonsChanged;
+
         }
 
         // ---------------- GMCM ----------------
@@ -116,10 +118,11 @@ namespace RainTuner
             }
         }
 
-        // --------------- End of day ---------------
-        private void OnDayEnding(object? sender, DayEndingEventArgs e)
+        // --------------- Start of day ---------------
+        private void OnDayStarted(object? sender, DayStartedEventArgs e)
         {
-            if (!Context.IsWorldReady)
+            // alleen host beslist het weer
+            if (!Context.IsWorldReady || !Context.IsMainPlayer)
                 return;
 
             int tomorrowDay = Game1.dayOfMonth == 28 ? 1 : Game1.dayOfMonth + 1;
@@ -163,13 +166,16 @@ namespace RainTuner
                 _ => 0
             };
 
-            var rng = new Random(unchecked((int)(Game1.uniqueIDForThisGame + Game1.stats.DaysPlayed * 9973)));
+            var rng = new Random(unchecked((int)(Game1.uniqueIDForThisGame + (Game1.stats.DaysPlayed + 1) * 9973)));
             bool precipValley = rng.NextDouble() < (valleyChance / 100.0);
 
             if (precipValley)
                 ApplyPrecipitation(seasonTomorrow);
             else if (Config.ForceSunnyOnMiss)
+            {
                 Game1.weatherForTomorrow = Game1.weather_sunny;
+                Monitor.Log("Chance roll failed → forcing Sunny for tomorrow.", LogLevel.Trace);
+            }
         }
 
         // --------------- Core logic ---------------
