@@ -1,7 +1,7 @@
 {
     "Name": "Rain Tuner",
     "Author": "Link007",
-    "Version": "1.5.0",
+    "Version": "1.6.0",
     "Description": "Set the chance of rain per season and force rain for tomorrow with a hotkey. Includes GMCM.",
     "UniqueID": "link007.RainTuner",
     "EntryDll": "RainTuner.dll",
